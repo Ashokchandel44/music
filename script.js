@@ -1,7 +1,7 @@
 const mainCard = document.querySelector("#ContentWarpper");
 const songImg = document.querySelector("#SongImg");
 const controlButtons = document.querySelector(".control");
-//const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 
 
 setInterval(()=>
@@ -11,7 +11,7 @@ var hr= d.getHours(); // => 9
 var min = d.getMinutes(); // =>  30
 var sec = d.getSeconds(); 
 //console.log(`${hr}:${min}:${sec}`)  
-document.querySelector("#Year").innerHTML = `${hr}:${min}:${sec}`;
+document.querySelector("#Time").innerHTML = `${hr}:${min}:${sec}`;
     },1000)
 
 
@@ -171,7 +171,8 @@ progressBar.addEventListener("click", (event) => {
   audio.currentTime = moreProgress;
 });
 
-//document.querySelector("#Year").innerHTML = currentYear;
+document.querySelector("#Year").innerHTML = currentYear;
+document.querySelector("#Time").innerHTML = currentYear;
 
 mainCard.addEventListener("mouseover", (event) => {
   const xAxis = (window.innerWidth / 2 - event.pageX) / 15;
