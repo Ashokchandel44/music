@@ -18,6 +18,19 @@ if(hr>12)
 document.querySelector("#Time").innerHTML = `${hr}:${min}:${sec}`;
     },1000)
 
+let fetchData = async (rand)=>
+    {
+        let res = await fetch("https://type.fit/api/quotes");
+        let result = await res.json();
+        document.querySelector("#newq").innerHTML = `${result[rand].text}`; 
+    }
+setInterval(()=>{
+    const rand = Math.floor(Math.random() * 6) + 1
+fetchData(rand)
+
+},4000)
+
+
 
 
 
