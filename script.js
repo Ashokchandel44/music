@@ -10,6 +10,10 @@ var d = new Date(); // for now
 var hr= d.getHours(); // => 9
 var min = d.getMinutes(); // =>  30
 var sec = d.getSeconds(); 
+if(hr>12)
+{
+    hr = hr-12;
+}
 //console.log(`${hr}:${min}:${sec}`)  
 document.querySelector("#Time").innerHTML = `${hr}:${min}:${sec}`;
     },1000)
