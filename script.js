@@ -176,7 +176,7 @@ progressBar.addEventListener("click", (event) => {
 });
 
 document.querySelector("#Year").innerHTML = currentYear;
-document.querySelector("#Time").innerHTML = currentYear;
+
 
 mainCard.addEventListener("mouseover", (event) => {
   const xAxis = (window.innerWidth / 2 - event.pageX) / 15;
