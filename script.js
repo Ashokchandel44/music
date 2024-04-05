@@ -52,7 +52,15 @@ let isPlaying = false;
 let index = 0;
 
 const songDataBase = [
-  {
+  
+   
+    {
+    songSrc: "./music/Titli _ Satinder Sartaaj _ Official Video _ Latest Punjabi Song 2022 _New Romantic Song__JugnuGlobal(MP3_320K).mp3",
+    title: "Ashok",
+    artist: "Chandel",
+    imgSrc: "./img/music1.jpg",
+  },
+    {
     songSrc: "./music/music1.mp3",
     title: "Assalamu Alaika",
     artist: "Maher Zain",
