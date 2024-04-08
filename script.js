@@ -33,6 +33,68 @@ fetchData(rand)
 
 
 
+function updatedate(){
+    var currentDate = new Date();
+    
+    var hr = currentDate.getHours();
+    var min = currentDate.getMinutes();
+    var sec = currentDate.getSeconds();
+    
+  var date = currentDate.getDate();
+  var month = currentDate.getMonth() + 1; // Adding 1 to match the usual month format
+  var year = currentDate.getFullYear();
+if (hr>12){
+    hr = hr-12;
+}
+if (sec < 10) {
+    sec = "0"+sec;
+}
+    if (min < 10) {
+    min = "0"+min;
+}
+     if (hr < 10) {
+    hr = "0"+hr;
+}
+
+
+  if (sec < 12) {
+    sec = sec+"AM";
+}  else {
+       sec = sec+"PM";
+}  
+
+    if (date < 10) {
+    date = "0"+date;
+}  
+  if (month < 10) {
+    month = "0"+month;
+}
+//function getAMPM(hours) {
+ //   return hours >= 12 ? 'PM' : 'AM';
+//}
+   // var ampm = getAMPM(hr);
+    
+    
+      var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ "  <br>  Date: " +date+"-"+month+"-"+year;
+ document.querySelector("#timedate").innerHTML = `Time: " +hr+ ":" +min+ ":" +sec+ "  <br>  Date: " +date+"-"+month+"-"+year`; 
+  
+    append(datestring);
+}
+
+//function 
+//    append(datestring){
+ //   jQuery("h1.product_title.entry-title").append(datestring);
+//}
+function append(datestring) {
+    jQuery("h1.product_title.entry-title").html(datestring);
+}
+
+updatedate();
+
+setInterval(updatedate,1000);
+
+
+
 
 
 const playPauseButton = document.querySelector("#PausePlay");
