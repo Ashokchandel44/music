@@ -252,7 +252,7 @@ if (hr == 0){
       var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ " "+ampm+"    Date: " +date+"-"+month+"-"+year;
 //var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
             //console.log(datestring);
-            document.getElementById("time").innerHTML = datestring;
+            document.getElementById("timedate").innerHTML = datestring;
 }
 
 
