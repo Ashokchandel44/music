@@ -211,3 +211,55 @@ mainCard.addEventListener("mouseleave", () => {
   songImg.style.transform = "rotate(0deg)";
   controlButtons.style.transform = "rotate(0deg)";
 });
+
+
+//for time functionality
+
+function updatedate(){
+    var currentDate = new Date();
+    
+    var hr = currentDate.getHours();
+    var min = currentDate.getMinutes();
+    var sec = currentDate.getSeconds();
+    
+  var date = currentDate.getDate();
+  var month = currentDate.getMonth() + 1; // Adding 1 to match the usual month format
+  var year = currentDate.getFullYear();
+if (hr>12){
+    hr = hr-12;
+}
+if (sec < 10) {
+    sec = "0"+sec;
+}
+    if (min < 10) {
+    min = "0"+min;
+}
+     if (hr < 10) {
+    hr = "0"+hr;
+}
+if (hr == 0){
+	hr = 12;
+}
+ 
+
+    if (date < 10) {
+    date = "0"+date;
+}  
+  if (month < 10) {
+    month = "0"+month;
+}
+           var ampm = (currentDate.getHours() < 12) ? "AM" : "PM";
+      var datestring = "Time: " +hr+ ":" +min+ ":" +sec+ " "+ampm+"    Date: " +date+"-"+month+"-"+year;
+//var datestring = year+"-"+month+"-"+date+" "+hr+":"+min+":"+sec;
+            //console.log(datestring);
+            document.getElementById("time").innerHTML = datestring;
+}
+
+
+/*function append(datestring) {
+    jQuery(".time").html(datestring);
+}*/
+
+updatedate();
+
+setInterval(updatedate,1000);
